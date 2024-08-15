@@ -2,17 +2,46 @@
 
 ## Project Overview
 
-This repo showcases Natural Language Processing (NLP) projects focused on  techniques to analyze clinical note dataset. BioBert, ClinicalBert and medacy are leveraged due to their biomedical domain specificity.
-
-The notebooks are focused on gaining insights from clinician notes through entity recognition, sentiment analysis, relation extraction, and topic modeling and to a lesser extent of building a predictive model to detect sepsis
+This repository explores NLP techniques (entity recognition, relation extraction, topic modeling) applied to clinical notes using domain-specific models (BioBert, ClinicalBert, Medacy). The goal is to extract valuable insights and potentially predict conditions like sepsis.
 
 ## Setup
 
-Download the training and validation datasets and install the following packages with the command: 
+**Clone the repository:**
 
 ```bash
-!pip install -r requirements.txt
+git clone https://github.com/OpenBioResearch/nlp-clinical-notes.git
+cd nlp-clinical-notes
 ```
+
+**Create a virtual environment:**
+```bash
+python -m venv .venv 
+```
+
+**Activate the virtual environment (git bash):**
+
+
+
+```bash
+source .venv/Scripts/activate
+source .venv/bin/activate
+```
+* You should see the virtual environment name (`.venv`) appear near your terminal prompt, indicating it's active.
+
+**Install the packages:**
+
+```bash
+pip install -r requirements.txt
+```
+These Jupyter notebooks were tested and dployed using Python 3.10.
+
+## Performance Considerations
+
+Stanza offers high accuracy for NLP tasks, but this comes with a trade-off in running time. The library uses deep learning models, which can be resource-intensive and may run longer compared to other NLP tools, especially when processing large datasets or performing complex tasks. For better performance, particularly when dealing with substantial data, consider utilizing GPU acceleration.
+
+## Dataset
+
+The MTS-Dialog Clinical Notes training and validation datasets are included in this repo.
 
 ## License
 
